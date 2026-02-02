@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannah - Transformation Architect for Kenyan Institutions</title>
+    <title>Hannah at Work - Professional School Oversight for Kenyan School Owners</title>
+    <meta name="description" content="Independent school monitoring and operations support for aging founders, diaspora investors, and working professionals. Monthly oversight that gives you truth, not theatre.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -32,12 +33,10 @@
             overflow-x: hidden;
         }
 
-        /* Smooth scroll */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Typography */
         h1, h2, h3 {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
@@ -185,9 +184,17 @@
             font-size: clamp(1.1rem, 2vw, 1.4rem);
             color: var(--slate);
             max-width: 800px;
-            margin-bottom: 3rem;
+            margin-bottom: 1.5rem;
             line-height: 1.8;
             animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            max-width: 900px;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease 0.7s both;
         }
 
         .gradient-text {
@@ -275,192 +282,253 @@
             margin-bottom: 1rem;
         }
 
-        /* Story Section */
-        .story-content {
+        /* Value Prop Grid */
+        .value-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .story-text {
-            position: relative;
-        }
-
-        .story-text::before {
-            content: '"';
-            position: absolute;
-            top: -2rem;
-            left: -2rem;
-            font-size: 8rem;
-            font-family: 'Cormorant Garamond', serif;
-            color: rgba(139, 92, 246, 0.2);
-            line-height: 1;
-        }
-
-        .story-visual {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
-            border-radius: 20px;
-            padding: 3rem;
-            border: 1px solid rgba(139, 92, 246, 0.2);
-            backdrop-filter: blur(10px);
-        }
-
-        .story-stat {
-            margin-bottom: 2rem;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-family: 'Cormorant Garamond', serif;
-            background: linear-gradient(135deg, var(--electric-purple), var(--cyan-glow));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 600;
-        }
-
-        .stat-label {
-            color: var(--slate);
-            font-size: 0.95rem;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
-            margin-top: 4rem;
+            margin-bottom: 3rem;
         }
 
-        .service-card {
+        .value-card {
             background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(6, 182, 212, 0.05));
             border: 1px solid rgba(139, 92, 246, 0.2);
             border-radius: 20px;
-            padding: 3rem;
+            padding: 2.5rem;
             transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
+        .value-card:hover {
+            transform: translateY(-5px);
             border-color: var(--cyan-glow);
         }
 
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--electric-purple), var(--cyan-glow));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            position: relative;
+        .value-card h3 {
+            color: var(--cyan-glow);
+            margin-bottom: 1.5rem;
         }
 
-        .service-content {
+        .value-card p {
+            color: var(--slate);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .value-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .value-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
             position: relative;
+            color: var(--off-white);
+        }
+
+        .value-card li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: var(--sunset-orange);
+        }
+
+        .highlight-box {
+            background: rgba(139, 92, 246, 0.1);
+            border-left: 4px solid var(--sunset-orange);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .highlight-box p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--off-white);
+            margin: 0;
+        }
+
+        /* Service Details */
+        .service-details {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(6, 182, 212, 0.08));
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            padding: 4rem;
+            backdrop-filter: blur(10px);
+            margin: 4rem 0;
         }
 
         .service-list {
-            list-style: none;
-            margin: 1.5rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
         }
 
-        .service-list li {
+        .service-item {
+            padding: 1.5rem;
+            background: rgba(10, 17, 40, 0.5);
+            border-radius: 15px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .service-item h4 {
+            color: var(--cyan-glow);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .service-item ul {
+            list-style: none;
+        }
+
+        .service-item li {
+            padding: 0.6rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--slate);
+            line-height: 1.7;
+        }
+
+        .service-item li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--neon-green);
+            font-weight: 700;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--cyan-glow);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.3);
+        }
+
+        .pricing-card h4 {
+            color: var(--cyan-glow);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .size {
+            color: var(--slate);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--sunset-orange);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card .period {
+            color: var(--slate);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .comparison-box {
+            background: rgba(10, 17, 40, 0.6);
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+        }
+
+        .comparison-box h4 {
+            color: var(--sunset-orange);
+            margin-bottom: 1.5rem;
+        }
+
+        .comparison-box ul {
+            list-style: none;
+        }
+
+        .comparison-box li {
             padding: 0.75rem 0;
             padding-left: 1.5rem;
             position: relative;
             color: var(--slate);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.1);
         }
 
-        .service-list li::before {
+        .comparison-box li:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-box li::before {
             content: '→';
             position: absolute;
             left: 0;
             color: var(--cyan-glow);
         }
 
-        /* Approach Section */
-        .approach-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+        /* Who This Is For */
+        .checklist {
+            list-style: none;
+            margin: 2rem 0;
         }
 
-        .approach-item {
-            text-align: center;
-            padding: 2rem;
+        .checklist li {
+            padding: 1rem 0;
+            padding-left: 3rem;
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
 
-        .approach-number {
-            font-size: 3rem;
-            font-family: 'Cormorant Garamond', serif;
-            background: linear-gradient(135deg, var(--electric-purple), var(--cyan-glow));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 600;
-            margin-bottom: 1rem;
+        .checklist li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
         }
 
-        .approach-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .approach-item p {
-            color: var(--slate);
-        }
-
-        /* Credentials Section */
-        .credentials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .credential-card {
+        /* FAQ */
+        .faq-item {
             background: rgba(139, 92, 246, 0.05);
             border: 1px solid rgba(139, 92, 246, 0.2);
             border-radius: 15px;
             padding: 2rem;
-            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
         }
 
-        .credential-card h4 {
+        .faq-item:hover {
+            border-color: var(--cyan-glow);
+        }
+
+        .faq-item h4 {
             color: var(--cyan-glow);
             margin-bottom: 1rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
-        .credential-card p {
+        .faq-item p {
             color: var(--slate);
-            font-size: 0.95rem;
+            line-height: 1.8;
         }
 
-        /* Contact Section */
+        /* Contact */
         .contact-container {
             max-width: 700px;
             margin: 0 auto;
@@ -471,81 +539,51 @@
             backdrop-filter: blur(10px);
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
+        .contact-methods {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--cyan-glow);
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(10, 17, 40, 0.6);
-            border: 1px solid rgba(139, 92, 246, 0.3);
-            border-radius: 8px;
-            color: var(--off-white);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1rem;
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(10, 17, 40, 0.5);
+            border-radius: 15px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
             transition: all 0.3s ease;
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
+        .contact-method:hover {
             border-color: var(--cyan-glow);
-            background: rgba(10, 17, 40, 0.8);
+            transform: translateX(10px);
         }
 
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
+        .contact-icon {
+            font-size: 2rem;
         }
 
-        .form-submit {
-            width: 100%;
-            padding: 1.2rem;
-            background: linear-gradient(135deg, var(--electric-purple), var(--cyan-glow));
-            border: none;
-            border-radius: 8px;
-            color: var(--pure-white);
-            font-size: 1rem;
+        .contact-info h4 {
+            color: var(--cyan-glow);
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info p {
+            color: var(--slate);
+            font-size: 0.9rem;
+        }
+
+        .contact-info a {
+            color: var(--off-white);
+            text-decoration: none;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
 
-        .form-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
-        }
-
-        .form-message {
-            margin-top: 1rem;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            display: none;
-        }
-
-        .form-message.success {
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            color: #10B981;
-        }
-
-        .form-message.error {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            color: #EF4444;
+        .contact-info a:hover {
+            color: var(--cyan-glow);
         }
 
         /* Footer */
@@ -596,21 +634,19 @@
                 display: none;
             }
 
-            .story-content {
+            .value-grid,
+            .service-list,
+            .pricing-grid {
                 grid-template-columns: 1fr;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
+            .service-details {
+                padding: 2rem;
             }
 
             .footer-content {
                 flex-direction: column;
                 text-align: center;
-            }
-
-            .approach-grid {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -631,12 +667,11 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">Hannah</div>
+            <div class="logo">Hannah at Work</div>
             <ul class="nav-links">
-                <li><a href="#story">Story</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#approach">Approach</a></li>
-                <li><a href="#credentials">Credentials</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -645,242 +680,530 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-label">Transformation Architect</div>
-            <h1>Building <span class="gradient-text">Sustainable Systems</span> for Kenyan Institutions</h1>
+            <div class="hero-label">Professional School Oversight</div>
+            <h1>Professional Oversight for School Owners Who <span class="gradient-text">Can't Be There Every Day</span></h1>
             <p class="hero-subtitle">
-                I help schools build operational frameworks that work and support NGOs with rigorous field research across Kenya. 
-                Psychology-trained, operations-tested, transformation-focused.
+                Independent monitoring and operations support for Kenyan schools run by aging founders, diaspora investors, and working professionals
+            </p>
+            <p class="hero-description">
+                You've invested years and millions into your school. But declining health, distance, or competing priorities make daily management impossible. 
+                How do you protect your legacy without burning out—or getting burned?
+            </p>
+            <p class="hero-description" style="font-weight: 600;">
+                I provide professional oversight that gives you truth, not theatre. Monthly monitoring. Independent reporting. Operational expertise. Peace of mind.
             </p>
             <div class="cta-group">
-                <a href="#services" class="btn btn-primary"><span>Explore Services</span></a>
-                <a href="#contact" class="btn btn-secondary">Book Consultation</a>
+                <a href="#contact" class="btn btn-primary"><span>Book a Consultation</span></a>
+                <a href="#services" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
     </section>
 
-    <!-- Story Section -->
-    <section id="story" class="reveal">
+    <!-- Value Proposition -->
+    <section id="problem" class="reveal">
         <div class="section-header">
-            <div class="section-label">The Journey</div>
-            <h2>From Operations Director to <span class="gradient-text">Transformation Architect</span></h2>
+            <div class="section-label">The Challenge</div>
+            <h2>The Problem Every School Owner Faces</h2>
         </div>
-        <div class="story-content">
-            <div class="story-text">
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--slate);">
-                    I entered education operations at 19 and spent seven years building systems, leading teams, and transforming schools. 
-                    When that chapter ended unexpectedly with a successful acquisition, I faced the question every professional dreads: 
-                    <strong style="color: var(--off-white);">Who am I when the title is gone?</strong>
-                </p>
-                <p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--slate);">
-                    That crisis became clarity. I wasn't just an operations person—I was a <strong style="color: var(--cyan-glow);">systems thinker</strong>, 
-                    a <strong style="color: var(--cyan-glow);">transformation architect</strong>, and someone passionate about helping institutions navigate change 
-                    with strategy, not panic.
-                </p>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--slate);">
-                    Today, I combine psychology training, operational excellence, and lived transformation experience to help Kenyan schools 
-                    and NGOs build sustainable systems that actually work.
-                </p>
+        <div class="value-grid">
+            <div class="value-card">
+                <h3>Aging Founders</h3>
+                <p style="margin-bottom: 1.5rem;">You built this school from nothing. It's your legacy, your pension, your pride. But:</p>
+                <ul>
+                    <li>Your energy isn't what it was</li>
+                    <li>Health concerns make daily visits difficult</li>
+                    <li>You've earned rest, but you can't risk losing control</li>
+                    <li>Your children aren't interested in taking over</li>
+                    <li>You need to step back without stepping away</li>
+                </ul>
             </div>
-            <div class="story-visual">
-                <div class="story-stat">
-                    <div class="stat-number">7</div>
-                    <div class="stat-label">Years Operations Leadership in Education</div>
-                </div>
-                <div class="story-stat">
-                    <div class="stat-number">23</div>
-                    <div class="stat-label">Months to Transform School from Decline to Acquisition-Ready</div>
-                </div>
-                <div class="story-stat">
-                    <div class="stat-number">2nd</div>
-                    <div class="stat-label">Generation Entrepreneur (Family Business Exit)</div>
-                </div>
+
+            <div class="value-card">
+                <h3>Diaspora Owners</h3>
+                <p style="margin-bottom: 1.5rem;">You're building wealth abroad while investing at home. But:</p>
+                <ul>
+                    <li>You can only visit 2-3 times per year</li>
+                    <li>Time zones make communication difficult</li>
+                    <li>You hear "everything is fine" but suspect otherwise</li>
+                    <li>Family oversight comes with drama</li>
+                    <li>You need independent eyes you can trust</li>
+                </ul>
             </div>
+
+            <div class="value-card">
+                <h3>Professional Owners</h3>
+                <p style="margin-bottom: 1.5rem;">You inherited or invested in a school while maintaining your career. But:</p>
+                <ul>
+                    <li>Your practice/job demands 50+ hours weekly</li>
+                    <li>Split attention means nothing gets your best</li>
+                    <li>You feel guilty but overwhelmed</li>
+                    <li>The school investment should work FOR you, not consume you</li>
+                    <li>You need professional management without hiring full-time</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <p>You all need the same thing: Someone who shows up when you can't. Someone who tells you the truth. Someone who protects your investment.</p>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Core Service -->
     <section id="services" class="reveal">
         <div class="section-header">
-            <div class="section-label">What I Do</div>
-            <h2>Two Paths to <span class="gradient-text">Institutional Transformation</span></h2>
-        </div>
-        <div class="services-grid">
-            <!-- Schools Service -->
-            <div class="service-card">
-                <div class="service-icon">🏫</div>
-                <div class="service-content">
-                    <h3>For Schools</h3>
-                    <p style="color: var(--slate); margin-bottom: 1.5rem;">
-                        Transform chaos into sustainable growth. I help schools build operational systems that eliminate firefighting 
-                        and create frameworks for quality education delivery.
-                    </p>
-                    <h4 style="color: var(--cyan-glow); margin-bottom: 1rem; font-size: 1rem;">What I Deliver:</h4>
-                    <ul class="service-list">
-                        <li>Operations systems audit and optimization</li>
-                        <li>Enrollment and retention strategies</li>
-                        <li>Staff efficiency frameworks</li>
-                        <li>Quality assurance protocols</li>
-                        <li>Sustainable growth planning</li>
-                        <li>Digital visibility strategy</li>
-                    </ul>
-                    <p style="color: var(--sunset-orange); margin-top: 1.5rem; font-weight: 500;">
-                        <strong>Outcome:</strong> Systems that work without constant oversight, freeing you to focus on educational excellence.
-                    </p>
-                </div>
-            </div>
-
-            <!-- NGOs Service -->
-            <div class="service-card">
-                <div class="service-icon">🔬</div>
-                <div class="service-content">
-                    <h3>For NGOs</h3>
-                    <p style="color: var(--slate); margin-bottom: 1.5rem;">
-                        Rigorous field research with cultural competence. I coordinate education, gender, and equality research projects 
-                        across Kenya with efficiency and local insight.
-                    </p>
-                    <h4 style="color: var(--cyan-glow); margin-bottom: 1rem; font-size: 1rem;">What I Deliver:</h4>
-                    <ul class="service-list">
-                        <li>Field research coordination (education, gender, equality)</li>
-                        <li>Data collection with cultural sensitivity</li>
-                        <li>Project management for development initiatives</li>
-                        <li>On-the-ground insights across Kenyan regions</li>
-                        <li>Research methodology consulting</li>
-                        <li>Board advisory (systems effectiveness, I/O psychology)</li>
-                    </ul>
-                    <p style="color: var(--sunset-orange); margin-top: 1.5rem; font-weight: 500;">
-                        <strong>Outcome:</strong> Quality data, efficient execution, culturally-informed insights that drive real impact.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Approach Section -->
-    <section id="approach" class="reveal">
-        <div class="section-header">
-            <div class="section-label">How I Work</div>
-            <h2>The <span class="gradient-text">Transformation Framework</span></h2>
-        </div>
-        <div class="approach-grid">
-            <div class="approach-item">
-                <div class="approach-number">01</div>
-                <h3>Diagnose</h3>
-                <p>Deep systems audit to identify root causes, not just symptoms. I examine operations, culture, and hidden inefficiencies.</p>
-            </div>
-            <div class="approach-item">
-                <div class="approach-number">02</div>
-                <h3>Design</h3>
-                <p>Custom frameworks tailored to your context—not cookie-cutter solutions. Built for Kenyan realities and your specific constraints.</p>
-            </div>
-            <div class="approach-item">
-                <div class="approach-number">03</div>
-                <h3>Deploy</h3>
-                <p>Implementation support with clear milestones. I help you build systems that your team can own and sustain long-term.</p>
-            </div>
-            <div class="approach-item">
-                <div class="approach-number">04</div>
-                <h3>Develop</h3>
-                <p>Ongoing optimization based on real-world feedback. Systems improve as your institution grows and evolves.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Credentials Section -->
-    <section id="credentials" class="reveal">
-        <div class="section-header">
-            <div class="section-label">Expertise</div>
-            <h2>Psychology-Trained, <span class="gradient-text">Operations-Tested</span></h2>
-        </div>
-        <div class="credentials-grid">
-            <div class="credential-card">
-                <h4>🎓 Academic Foundation</h4>
-                <p>Psychology degree with concentrations in Industrial/Organizational Psychology and Management. Deep understanding of human systems, team dynamics, and institutional behavior.</p>
-            </div>
-            <div class="credential-card">
-                <h4>🏢 Operations Leadership</h4>
-                <p>7 years as Operations Director in education sector. Successfully transformed a school from decline to acquisition-ready in 23 months. Proven track record in systems building.</p>
-            </div>
-            <div class="credential-card">
-                <h4>🔬 Research Experience</h4>
-                <p>Field research coordination across Kenya focusing on education, gender, and equality. Experience with NGO sector and development work requiring cultural competence.</p>
-            </div>
-            <div class="credential-card">
-                <h4>🚀 Entrepreneurial Insight</h4>
-                <p>Second-generation entrepreneur with successful family business exit. Understanding of both building systems and navigating transitions.</p>
-            </div>
-            <div class="credential-card">
-                <h4>💡 Systems Thinking</h4>
-                <p>Specialized in creating sustainable frameworks over quick fixes. Focus on building institutions that work without constant intervention.</p>
-            </div>
-            <div class="credential-card">
-                <h4>🌍 Kenyan Context</h4>
-                <p>Deep understanding of Kenyan educational landscape, cultural dynamics, and market realities. Solutions designed for our specific context.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="reveal">
-        <div class="section-header">
-            <div class="section-label">Let's Talk</div>
-            <h2>Ready to <span class="gradient-text">Transform Your Institution?</span></h2>
-            <p style="color: var(--slate); max-width: 600px; margin: 1rem auto;">
-                I work with a select number of schools and NGOs (Tuesday-Thursday). Book a consultation to discuss 
-                how we can build sustainable systems for your organization.
+            <div class="section-label">The Solution</div>
+            <h2>School Oversight That <span class="gradient-text">Actually Works</span></h2>
+            <p style="font-size: 1.2rem; color: var(--slate); max-width: 800px; margin: 1rem auto;">
+                Monthly monitoring for owners who need real answers, not reassuring lies
             </p>
         </div>
+
+        <div class="service-details">
+            <h3 style="color: var(--cyan-glow); margin-bottom: 2rem; text-align: center;">What You Get</h3>
+            
+            <div class="service-list">
+                <div class="service-item">
+                    <h4>Two Unannounced Visits per Month</h4>
+                    <ul>
+                        <li>No advance notice = genuine picture of daily operations</li>
+                        <li>Random days/times to see authentic conditions</li>
+                        <li>Both formal observations and casual interactions</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h4>Staff Morale Intelligence</h4>
+                    <ul>
+                        <li>Confidential interviews with 3-5 staff per visit</li>
+                        <li>Exit risk detection before resignations happen</li>
+                        <li>Team culture assessment</li>
+                        <li>Leadership effectiveness evaluation</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h4>Financial Spot-Checks</h4>
+                    <ul>
+                        <li>Petty cash verification</li>
+                        <li>Receipt sampling and documentation review</li>
+                        <li>Payment processing observation</li>
+                        <li>Early theft/fraud detection</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h4>Parent Sentiment Tracking</h4>
+                    <ul>
+                        <li>5-10 parent contacts per month</li>
+                        <li>Satisfaction indicators</li>
+                        <li>Complaint pattern analysis</li>
+                        <li>Enrollment risk detection</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h4>Quality Observations</h4>
+                    <ul>
+                        <li>Classroom environment checks</li>
+                        <li>Student wellbeing indicators</li>
+                        <li>Facility condition monitoring</li>
+                        <li>Health and safety compliance</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h4>Comprehensive Monthly Report</h4>
+                    <ul>
+                        <li>Photo documentation</li>
+                        <li>Detailed findings across all areas</li>
+                        <li>Risk flagging and prioritization</li>
+                        <li>Actionable recommendations</li>
+                        <li>Trend analysis over time</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h4>Quarterly Strategic Sessions</h4>
+                    <ul>
+                        <li>60-minute video call</li>
+                        <li>Review trends and patterns</li>
+                        <li>Strategic planning support</li>
+                        <li>Problem-solving consultation</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <h4>On-Call Access</h4>
+                    <ul>
+                        <li>WhatsApp availability for urgent concerns</li>
+                        <li>Emergency support when needed</li>
+                        <li>Quick response to critical issues</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing -->
+        <div style="margin-top: 5rem;">
+            <h3 style="text-align: center; margin-bottom: 1rem;">Investment</h3>
+            <p style="text-align: center; color: var(--slate); margin-bottom: 3rem; font-size: 1.1rem;">Transparent, value-based pricing</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h4>Small Schools</h4>
+                    <div class="size">Under 100 students</div>
+                    <div class="price">KES 35,000</div>
+                    <div class="period">/month</div>
+                </div>
+
+                <div class="pricing-card">
+                    <h4>Medium Schools</h4>
+                    <div class="size">100-300 students</div>
+                    <div class="price">KES 50,000</div>
+                    <div class="period">/month</div>
+                </div>
+
+                <div class="pricing-card">
+                    <h4>Large Schools</h4>
+                    <div class="size">300+ students</div>
+                    <div class="price">KES 70,000</div>
+                    <div class="period">/month</div>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: var(--slate); margin-top: 2rem; font-style: italic;">
+                Minimum commitment: 3 months (ensures partnership, not one-off audit)
+            </p>
+
+            <div class="comparison-box">
+                <h4>Compare this investment to:</h4>
+                <ul>
+                    <li>Flying from UK/US quarterly: KES 150,000+ per trip</li>
+                    <li>Full-time Operations Manager: KES 80,000-150,000/month + benefits</li>
+                    <li>One major theft incident: KES 200,000-500,000+ loss</li>
+                    <li>Student exodus from quality issues: KES 500,000+ annual revenue loss</li>
+                </ul>
+                <p style="color: var(--sunset-orange); margin-top: 1.5rem; font-weight: 600; text-align: center;">
+                    This service pays for itself by preventing one major problem.
+                </p>
+            </div>
+        </div>
+
+        <!-- Who This Is For -->
+        <div style="margin-top: 5rem;">
+            <h3 style="text-align: center; margin-bottom: 2rem;">Who This Is For</h3>
+            <ul class="checklist">
+                <li>Aging school founders ready to step back without losing control</li>
+                <li>Diaspora investors who can't be on-site regularly</li>
+                <li>Working professionals running schools alongside careers</li>
+                <li>Second-generation owners managing inherited schools</li>
+                <li>Anyone who knows "everything is fine" is probably a lie</li>
+            </ul>
+        </div>
+
+        <!-- Why Independent Oversight -->
+        <div class="highlight-box" style="margin-top: 4rem;">
+            <h3 style="color: var(--cyan-glow); margin-bottom: 2rem;">Why Independent Oversight Matters</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div>
+                    <h4 style="color: var(--sunset-orange); margin-bottom: 1rem;">Family can't give you honest feedback</h4>
+                    <ul style="list-style: none; color: var(--slate);">
+                        <li style="padding: 0.5rem 0;">– They have relationships to protect</li>
+                        <li style="padding: 0.5rem 0;">– They may benefit from looking the other way</li>
+                        <li style="padding: 0.5rem 0;">– They lack professional expertise</li>
+                        <li style="padding: 0.5rem 0;">– Drama comes with the territory</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--sunset-orange); margin-bottom: 1rem;">Your staff won't tell you the truth</h4>
+                    <ul style="list-style: none; color: var(--slate);">
+                        <li style="padding: 0.5rem 0;">– They fear consequences</li>
+                        <li style="padding: 0.5rem 0;">– They're invested in looking good</li>
+                        <li style="padding: 0.5rem 0;">– They hide problems until crisis</li>
+                        <li style="padding: 0.5rem 0;">– They say what you want to hear</li>
+                    </ul>
+                </div>
+            </div>
+            <h4 style="color: var(--cyan-glow); margin-top: 2rem; margin-bottom: 1rem;">You need someone who:</h4>
+            <ul class="checklist">
+                <li>Reports only to you (no conflicting loyalties)</li>
+                <li>Has professional expertise (knows what "good" looks like)</li>
+                <li>Asks uncomfortable questions (gets real answers)</li>
+                <li>Shows up unannounced (sees authentic reality)</li>
+                <li>Documents everything (evidence, not opinions)</li>
+                <li>Understands Kenyan schools (practical, not theoretical)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="reveal">
+        <div class="section-header">
+            <div class="section-label">About</div>
+            <h2>Hi, I'm <span class="gradient-text">Hannah</span></h2>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--slate);">
+                I spent seven years running school operations in Kenya—building systems, managing teams, navigating CBC transitions, 
+                and learning what makes schools thrive or merely survive.
+            </p>
+            <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 1.5rem; color: var(--slate);">
+                When that chapter ended unexpectedly, I faced an identity crisis. But it became clarity: I understand how Kenyan schools 
+                actually work. I know where money disappears. I know how to spot staff about to resign. I know the difference between 
+                surface compliance and real excellence.
+            </p>
+            <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 2rem; color: var(--slate);">
+                Today, I help school owners protect their investments through professional oversight and operations consulting.
+            </p>
+
+            <div class="service-details" style="margin-top: 3rem;">
+                <h3 style="color: var(--cyan-glow); margin-bottom: 2rem; text-align: center;">What I Bring</h3>
+                <div class="value-grid">
+                    <div class="value-card">
+                        <h3>7 Years</h3>
+                        <p>Education operations leadership in Kenyan schools</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>B.A. Psychology</h3>
+                        <p>Industrial/Organizational concentration - understanding human systems</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Field Research</h3>
+                        <p>Experience with KNBS, universities, and development organizations</p>
+                    </div>
+                    <div class="value-card">
+                        <h3>Real Understanding</h3>
+                        <p>Lived experience of Kenyan school realities (rural and peri-urban)</p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="font-size: 1.3rem; font-weight: 600; text-align: center; margin-top: 3rem; color: var(--cyan-glow);">
+                I don't work for your headteacher. I don't work for your staff. I work for you.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="reveal">
+        <div class="section-header">
+            <div class="section-label">Questions</div>
+            <h2>Common Questions</h2>
+        </div>
+
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div class="faq-item">
+                <h4>How is this different from hiring a consultant for a one-time audit?</h4>
+                <p>One-time audits give you a snapshot. Monthly oversight gives you a movie. Problems reveal themselves over time—staff behavior, parent patterns, financial irregularities. Consistent monitoring catches issues early, prevents major crises, and builds accountability.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Won't my headteacher/staff resist unannounced visits?</h4>
+                <p>Initially, maybe. But good professionals welcome accountability. If someone resists oversight, that's information itself. We introduce this as "quality assurance partnership" and most teams adapt within 1-2 months. Resistance usually signals something to hide.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What if you find serious problems?</h4>
+                <p>I report everything directly to you with evidence, context, and recommended actions. You decide how to respond. I can provide guidance on addressing issues, or simply document for your own decision-making. Serious issues (theft, abuse, safety risks) are flagged immediately, not saved for monthly reports.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I start with just one school if I own multiple?</h4>
+                <p>Absolutely. Many clients start with their most concerning school or their flagship location. Once you see the value, expansion is simple.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>I live abroad—how do we communicate?</h4>
+                <p>Monthly reports are delivered via email/WhatsApp with photos and documentation. Quarterly calls are scheduled at your convenience (considering time zones). Urgent issues are communicated immediately via WhatsApp. You'll never wonder what's happening—you'll know.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What if my school is far from Nairobi?</h4>
+                <p>I currently serve schools within 150km of Nairobi, covering much of Central Kenya and surrounding areas. For schools further out, we can discuss customized arrangements or quarterly intensive oversight visits.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do you sign confidentiality agreements?</h4>
+                <p>Yes. Everything I observe stays between us. Your school's information, financials, and challenges are completely confidential.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="reveal" style="text-align: center; padding: 8rem 2rem;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="margin-bottom: 1.5rem;">Your Legacy Deserves <span class="gradient-text">Protection</span></h2>
+            <p style="font-size: 1.2rem; color: var(--slate); line-height: 1.8; margin-bottom: 3rem;">
+                You didn't build this school to watch it decline. Whether you're stepping back due to health, distance, or other commitments—your investment deserves professional oversight.
+            </p>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem;">
+                Let's discuss how monthly monitoring can give you the peace of mind you've earned.
+            </p>
+            <div class="cta-group" style="justify-content: center;">
+                <a href="#contact" class="btn btn-primary"><span>Book Consultation</span></a>
+                <a href="https://www.linkedin.com/in/hannahnjoroge/" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="reveal">
+        <div class="section-header">
+            <div class="section-label">Get In Touch</div>
+            <h2>Let's Talk About Your School</h2>
+            <p style="font-size: 1.1rem; color: var(--slate); max-width: 700px; margin: 1rem auto;">
+                Whether you're considering oversight services, need an operations audit, or just want to discuss your situation—I'm here to help.
+            </p>
+        </div>
+
         <div class="contact-container">
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                <!-- Web3Forms Configuration -->
-                <input type="hidden" name="access_key" value="0a531768-f9fb-4d98-9e07-a1c1455a9745">
-                <input type="hidden" name="subject" value="New Consultation Request from Website">
-                <input type="hidden" name="from_name" value="Transformation Architect Website">
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-info">
+                        <h4>Email</h4>
+                        <p>(I respond within 24 hours)</p>
+                        <a href="mailto:hannah.njoroge1@gmail.com">hannah.njoroge1@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">💼</div>
+                    <div class="contact-info">
+                        <h4>LinkedIn</h4>
+                        <p>(Connect and message me directly)</p>
+                        <a href="https://www.linkedin.com/in/hannahnjoroge/" target="_blank">View Profile</a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">🌍</div>
+                    <div class="contact-info">
+                        <h4>Based in Nairobi, Kenya</h4>
+                        <p>Serving schools within 150km (Central Kenya region)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: rgba(10, 17, 40, 0.5); border-radius: 15px; padding: 2rem; margin-top: 2rem;">
+                <h4 style="color: var(--cyan-glow); margin-bottom: 1rem; text-align: center;">Consultation Process</h4>
+                <div style="display: grid; gap: 1.5rem;">
+                    <div>
+                        <strong style="color: var(--sunset-orange);">Step 1: Initial Conversation (20-30 minutes)</strong>
+                        <p style="color: var(--slate); margin-top: 0.5rem;">Understand your situation, explain how oversight works, discuss your specific concerns, answer all questions</p>
+                    </div>
+                    <div>
+                        <strong style="color: var(--sunset-orange);">Step 2: Customized Proposal</strong>
+                        <p style="color: var(--slate); margin-top: 0.5rem;">Tailored to your school size and needs, clear pricing and timeline, sample report format, service agreement</p>
+                    </div>
+                    <div>
+                        <strong style="color: var(--sunset-orange);">Step 3: Pilot Month (Optional)</strong>
+                        <p style="color: var(--slate); margin-top: 0.5rem;">Try the service for one month, experience the value firsthand, decide if you want to continue, no long-term commitment required</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Contact Form -->
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" style="margin-top: 3rem;">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY_HERE">
+                <input type="hidden" name="subject" value="School Oversight Consultation Request">
+                <input type="hidden" name="from_name" value="Hannah at Work - Website">
                 <input type="hidden" name="redirect" value="https://web3forms.com/success">
-                <input type="hidden" name="email" value="hannah.njoroge1@gmail.com">
                 
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="name" required>
+                <h4 style="color: var(--cyan-glow); margin-bottom: 1.5rem; text-align: center;">Or Send Me a Message</h4>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--cyan-glow); font-size: 0.9rem; letter-spacing: 1px;">Your Name</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 1rem; background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px; color: var(--off-white); font-family: 'DM Sans', sans-serif; font-size: 1rem;">
                 </div>
                 
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--cyan-glow); font-size: 0.9rem; letter-spacing: 1px;">Email Address</label>
+                    <input type="email" name="email" required style="width: 100%; padding: 1rem; background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px; color: var(--off-white); font-family: 'DM Sans', sans-serif; font-size: 1rem;">
                 </div>
                 
-                <div class="form-group">
-                    <label for="organization">Organization Type *</label>
-                    <select id="organization" name="organization_type" required>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--cyan-glow); font-size: 0.9rem; letter-spacing: 1px;">I am a:</label>
+                    <select name="owner_type" required style="width: 100%; padding: 1rem; background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px; color: var(--off-white); font-family: 'DM Sans', sans-serif; font-size: 1rem;">
                         <option value="">Select...</option>
-                        <option value="school">School</option>
-                        <option value="ngo">NGO / Development Organization</option>
+                        <option value="aging_founder">Aging School Founder</option>
+                        <option value="diaspora_owner">Diaspora School Owner</option>
+                        <option value="professional_owner">Working Professional</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
                 
-                <div class="form-group">
-                    <label for="message">Tell me about your challenge *</label>
-                    <textarea id="message" name="message" required placeholder="What systems or transformation challenges are you facing?"></textarea>
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--cyan-glow); font-size: 0.9rem; letter-spacing: 1px;">Tell Me About Your Situation</label>
+                    <textarea name="message" required rows="5" placeholder="What challenges are you facing with your school?" style="width: 100%; padding: 1rem; background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 8px; color: var(--off-white); font-family: 'DM Sans', sans-serif; font-size: 1rem; resize: vertical;"></textarea>
                 </div>
                 
-                <button type="submit" class="form-submit">Request Consultation</button>
+                <button type="submit" style="width: 100%; padding: 1.2rem; background: linear-gradient(135deg, var(--electric-purple), var(--cyan-glow)); border: none; border-radius: 8px; color: var(--pure-white); font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Send Message</button>
                 
-                <div id="formMessage" class="form-message"></div>
+                <div id="formMessage" style="margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center; display: none;"></div>
             </form>
         </div>
+
+        <script>
+            // Form submission handling
+            const form = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        formMessage.textContent = '✓ Thank you! I\'ll respond within 24 hours.';
+                        formMessage.style.background = 'rgba(16, 185, 129, 0.1)';
+                        formMessage.style.border = '1px solid rgba(16, 185, 129, 0.3)';
+                        formMessage.style.color = '#10B981';
+                        formMessage.style.display = 'block';
+                        form.reset();
+                    } else {
+                        throw new Error('Submission failed');
+                    }
+                } catch (error) {
+                    formMessage.textContent = '✗ Something went wrong. Please email me directly at hannah.njoroge1@gmail.com';
+                    formMessage.style.background = 'rgba(239, 68, 68, 0.1)';
+                    formMessage.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+                    formMessage.style.color = '#EF4444';
+                    formMessage.style.display = 'block';
+                } finally {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                }
+            });
+        </script>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Hannah</div>
+            <div class="footer-logo">Hannah at Work</div>
             <div class="footer-links">
-                <a href="#story">Story</a>
                 <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
+                <a href="https://www.linkedin.com/in/hannahnjoroge/" target="_blank">LinkedIn</a>
             </div>
             <div style="color: var(--slate); font-size: 0.9rem;">
-                © 2026 Transformation Architect for Kenyan Institutions
+                © 2026 Professional School Oversight Services
             </div>
         </div>
     </footer>
@@ -901,47 +1224,7 @@
         }
 
         window.addEventListener('scroll', reveal);
-        reveal(); // Check on load
-
-        // Form submission handling
-        const form = document.getElementById('contactForm');
-        const formMessage = document.getElementById('formMessage');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const formData = new FormData(form);
-            const submitButton = form.querySelector('.form-submit');
-            const originalText = submitButton.textContent;
-            
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-            
-            try {
-                const response = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    formMessage.textContent = '✓ Thank you! I\'ll review your request and respond within 48 hours.';
-                    formMessage.className = 'form-message success';
-                    formMessage.style.display = 'block';
-                    form.reset();
-                } else {
-                    throw new Error('Submission failed');
-                }
-            } catch (error) {
-                formMessage.textContent = '✗ Something went wrong. Please email me directly.';
-                formMessage.className = 'form-message error';
-                formMessage.style.display = 'block';
-            } finally {
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }
-        });
+        reveal();
 
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
